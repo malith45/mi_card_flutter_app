@@ -9,11 +9,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        body: Container(),
+    return const MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.teal,
+      body: SafeArea(
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('images/profile.jpg'),
+            )
+          ],
+        ),
       ),
-    );
+    ));
   }
 }
